@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - motnitor.edge.operator
+  resources:
+  - edges
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - motnitor.edge.operator
+  resources:
+  - edges/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - motnitor.edge.operator
+  resources:
+  - edges/status
+  verbs:
+  - get
+  - patch
+  - update

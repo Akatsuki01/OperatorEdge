@@ -7,6 +7,11 @@ metadata:
     app.kubernetes.io/part-of: operatoredge
     app.kuberentes.io/managed-by: kustomize
     app.kubernetes.io/created-by: operatoredge
-  name: edge-sample
+  name: de002497
 spec:
   # TODO(user): Add fields here
+  edgename: "de002497"
+  vitals: 
+    working: "UP"
+status:
+  health: "OK"
