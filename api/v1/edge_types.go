@@ -29,13 +29,19 @@ type EdgeSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Edge. Edit edge_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	EdgeName string    `json:"edgename,omitempty"`
+	Vitals   EdgeVital `json:"vitals,omitempty"`
+}
+
+type EdgeVital struct {
+	Working string `json:"working,omitempty"`
 }
 
 // EdgeStatus defines the observed state of Edge
 type EdgeStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	Health string `json:"health,omitempty"`
 }
 
 //+kubebuilder:object:root=true
