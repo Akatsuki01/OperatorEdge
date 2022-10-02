@@ -1,0 +1,12 @@
+apiVersion: motnitor.edge.operator/v1
+kind: Edge
+metadata:
+  labels:
+    app.kubernetes.io/name: edge
+    app.kubernetes.io/instance: edge-sample
+    app.kubernetes.io/part-of: operatoredge
+    app.kuberentes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: operatoredge
+  name: edge-sample
+spec:
+  # TODO(user): Add fields here
